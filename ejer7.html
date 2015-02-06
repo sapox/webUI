@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Profile Form</title>
+	<style>
+		*{
+			font-family: sans-serif;
+		}
+		table{
+			width: 500px;
+		}
+		.bolded{
+			width: 40%;
+			text-align: right;
+			font-weight: bold;
+		}
+		.basic{
+			width: 90%;
+		}
+		.med{
+			width: 85%;
+			height: 60px;
+			text-align: left;
+			vertical-align: top;
+		}
+		#state{
+			width: 40px;
+		}
+		#country{
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<form action="#" method="POST">
+		<table border="1">
+			<tr>
+				<td class="bolded">Last Name</td>
+				<td colspan="3"><input type="text" class="basic" placeholder="Nekov"></td>
+			</tr>
+			<tr>
+				<td class="bolded">First Name</td>
+				<td colspan="3"><input type="text" class="basic" placeholder="Svetlin"></td>
+			</tr>
+			<tr>
+				<td class="bolded">Address</td>
+				<td colspan="3">
+					<textarea name="" class="med" cols="30" rows="10">17 Hristo Botev Str. Floor 3. apt. 12</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td class="bolded">City</td>
+				<td>
+					<input type="text">
+				</td>
+				<td>
+					<strong>State</strong>
+				</td>	
+				<td>
+					<input id="state" type="text">
+				</td>
+			</tr>
+			<tr>
+				<td class="bolded">Zip/Postal Code</td>
+				<td>
+					<input type="text" placeholder="9325">
+				</td>
+			</tr>
+			<tr>
+				<td class="bolded">Country</td>
+				<td colspan="2">
+					<select id="country">
+						<option value="1">Bulgaria</option>
+						<option value="2">Dinamarca</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

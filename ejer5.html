@@ -3,34 +3,45 @@
 <head>
 	<meta charset="UTF-8">
 	<title>cuadritos</title>
+	<style>
+		.der{
+			text-align: right;
+		}
+		.cen{
+			text-align: center;
+		}
+		.bot{
+			padding-top: 20px;
+		}
+	</style>
 </head>
 <body>
-	<table border="2" width="240px">
+	<table border="2" width="200px">
 		<tr>
-			<td colspan="3">Title goes here</td>
-			<td>A</td>
-			<td>B</td>
+			<td colspan="3" class="cen">Title goes here</td>
+			<td  class="cen">A</td>
+			<td class="der">B</td>
 		</tr>
 		<tr>
 			<td rowspan="3">C</td>
-			<td>D</td>
-			<td>E</td>
-			<td>F</td>
-			<td>G</td>
+			<td class="cen">D</td>
+			<td class="cen">E</td>
+			<td class="cen">F</td>
+			<td class="der">G</td>
 		</tr>
 		<tr>
-			<td>H</td>
-			<td colspan="2">I</td>
-			<td rowspan="2">J</td>
+			<td class="cen">H</td>
+			<td colspan="2" class="cen">I</td>
+			<td rowspan="2" class="der bot">J</td>
 		</tr>
 		<tr>
-			<td>K</td>
-			<td>L</td>
-			<td>M</td>
+			<td class="cen">K</td>
+			<td class="cen">L</td>
+			<td class="cen">M</td>
 		</tr>
 		<tr>
-			<td>N</td>
-			<td colspan="4">O</td>
+			<td class="der">N</td>
+			<td colspan="4" class="cen">O</td>
 		</tr>
 	</table>
 </body>
