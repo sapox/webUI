@@ -1,0 +1,15 @@
+table{
+	font-family: sans-serif;
+	font-size: 0.9em;
+	border:1px solid;
+	border-collapse: collapse;
+}
+td, th{
+	border: 1px solid;
+	padding: 0.5rem;
+}
+thead{
+	background-color: #53B306;
+	color: #FFFFFF;
+	border-color: black;
+}
