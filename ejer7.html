@@ -30,6 +30,11 @@
 		#country{
 			width: 100%;
 		}
+		#bottom{
+			background-color: #CFEBDF;
+			text-align: center;
+			height: 30px;
+		}
 	</style>
 </head>
 <body>
@@ -77,10 +82,38 @@
 				</td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td class="bolded">Phone (country code, area code, number)</td>
+				<td colspan="3">(+<input type="text" style="width:50px;"> ) <input type="text" style="width:50px;"> - <input type="text" style="width:90px;"></td>
+			</tr>
+			<tr>
+				<td class="bolded">E-mail</td>
+				<td colspan="3"><input type="text" style="width:90%;" placeholder="nakov@kaspichan.org"></td>
+			</tr>
+			<tr>
+				<td class="bolded">Birth date</td>
+				<td colspan="3">Month <input type="text" style="width:20px;"> Day <input type="text" style="width:20px;"> Year (4 digit)<input type="text" style="width:50px;"></td>
+			</tr>
+			<tr>
+				<td class="bolded">Gender</td>
+				<td colspan="3">
+					<select>
+						<option value="1">Male</option>
+						<option value="2">Female</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="bolded">Starting date</td>
+				<td colspan="3"><input type="radio" value="spring" checked>Spring 2006<input type="radio" value="summer">Summer 2006</td>
+			</tr>
+			<tr>
+				<td class="bolded">Comments/Questions</td>
+				<td colspan="3">
+					<textarea name="" class="med" cols="30" rows="10">Please send me nor information about the lodging</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5" id="bottom"><button type="button">Submit</button> <button>Clear this form</button></td>
 			</tr>
 		</table>
 	</form>

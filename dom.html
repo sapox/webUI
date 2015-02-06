@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM examples</title>
+</head>
+<body class="normal">
+	<h1 id="headline">Hello <em>World</em></h1>
+	<p id="content">
+		this is a normal <strong>paragraph.</strong>
+		<br>
+		<em>this is emphasized</em>
+	</p>
+	<ul id="list">
+		<li id="item_1">
+			Item 1
+		</li>
+		<li id="item_2">
+			Item 2
+		</li>
+		<li id="item_3">
+			Item 3
+		</li>
+	</ul>
+	<script>
+	function bind(element, event, func){
+		if (element.addEventListener){
+			element.addEventListener(event, func);
+		}else if(element.attacheEvent){
+			element.attacheEvent('on'+event, func);
+		}else{
+			element["on"+event]=func;
+		}
+	}
+	var h1 = document.getElementById('headline')
+	bind(h1, 'click', function(){alert('me clickearonnnn!!')})
+	/*function clickListener(){
+		alert('me clickearon');
+	}
+	var h1 = document.getElementById('headline');
+		if(h1.addEventListener){
+			h1.addEventListener('click', clickListener);
+		}else if(h1.attacheEvent){
+			h1.attacheEvent('onclick', clickListener);
+		}else{
+			h1.onclick = clickListener;
+		}*/
+	</script>
+	<!--
+	links de interes 
+	http://www.w3schools.com/tags/ref_html_dtd.asp
+	http://www.w3schools.com/tags/tag_DOCTYPE.asp
+	https://html5test.com/
+	-->
+</body>
+</html>
