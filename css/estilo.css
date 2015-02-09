@@ -1,0 +1,46 @@
+/* compartir despues en federico.severino@external.globant.com */
+#prof{
+	max-width: 300px;
+	min-height: 200px; 
+	margin-right: 5px;
+	background-color: #CFEDFF;
+	color:#1B3B62;
+}
+#prof a 
+{
+	font-size: 10px;
+}
+#prof a, em, hr{
+	margin-left:10px;
+	margin-right: 10px;
+}
+#prof p{
+	margin-left: 10px;
+	line-height: 20px;
+}
+img{
+	margin-left: 10px;
+}
+#texto{
+	font-size: 13px;
+}
+#texto-f p{
+	line-height: 10px;
+	font-size: 13px;
+}
+li p{
+	text-indent: 10px;
+}
+td{
+	width: 25%;
+}
+#info{
+	font-size: 15px;
+}
+#texto p em a{
+	font-size: 13px;
+	margin-left: 0px;	
+}
+nav{
+	margin-bottom: 30px;
+}

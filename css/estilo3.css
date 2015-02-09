@@ -1,0 +1,31 @@
+table{
+	font-family: sans-serif;
+	font-size: 0.9em;
+	border:1px solid;
+	border-collapse: collapse;
+}
+td, th{
+	padding: 0.5rem;
+}
+td{
+	border: 1px solid;
+}
+#top{
+	background-color: #53B306;
+	color: #FFFFFF;
+}
+tr:nth-child(even) {background: #ECECD8}
+tr:nth-child(odd) {background: #FFF}
+.flag{
+	width:26px;
+	height: 18px;
+}
+.germany{
+	background: url(../img/flags.png) -1px -2px;
+}
+.mexico{
+	background: url(../img/flags.png) -1px -30px;
+}
+.uk{
+	background: url(../img/flags.png) -1px -60px;
+}
