@@ -1,0 +1,45 @@
+#container{
+	width: 50%;
+	min-height: 330px;
+	background: #5E5D5D;
+
+}
+#members{
+	position:relative;
+	background: #5E5D5D;
+	vertical-align: middle;
+	text-align: justify;
+	
+}
+#text{
+	float:left;
+}
+h2{
+	color:#FBFF80;
+	font-weight:normal;
+	font-size: 2em;
+}
+#monitor{
+	width: 50px;
+	height: 53px;
+	background:url(../img/monitor.png);
+}
+#boton{
+	width: 60px;
+	height: 31px;
+	background:url(../img/button.png);
+}
+#division{ 
+    margin:0px;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(grey), to(grey), color-stop(50%, black));
+}
+p{
+	padding: 10px 10px 10px 10px;
+	font-size: 1em;
+	font-family:Arial;
+} 
+h2{
+	padding: 0px 0px 0px 10px;
+}
