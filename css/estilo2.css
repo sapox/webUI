@@ -27,6 +27,8 @@ table{
 	color:#B5B5B5;
 }
 img{
-	border-radius:20px;
+	background: url(../img/square.png);
+	border-radius: 15px;
 	height: 15px;
+	width: 15px;
 }
