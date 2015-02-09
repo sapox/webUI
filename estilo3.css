@@ -5,11 +5,27 @@ table{
 	border-collapse: collapse;
 }
 td, th{
-	border: 1px solid;
 	padding: 0.5rem;
 }
-thead{
+td{
+	border: 1px solid;
+}
+#top{
 	background-color: #53B306;
 	color: #FFFFFF;
-	border-color: black;
+}
+tr:nth-child(even) {background: #ECECD8}
+tr:nth-child(odd) {background: #FFF}
+.flag{
+	width:26px;
+	height: 18px;
+}
+.germany{
+	background: url(flags.png) -1px -2px;
+}
+.mexico{
+	background: url(flags.png) -1px -30px;
+}
+.uk{
+	background: url(flags.png) -1px -60px;
 }
