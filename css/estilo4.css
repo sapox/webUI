@@ -4,10 +4,10 @@ ul, li{
 }
 a{
 	text-decoration: none;
-	background: #bac4cc;
-	background-image: -webkit-linear-gradient(#bac4cc, #667d8c);
-	background-image: -o-linear-gradient(#bac4cc, #667d8c);
-	background-image: linear-gradient(#bac4cc, #667d8c);
+	background: #EDEDED;
+	background-image: -webkit-linear-gradient(#EDEDED, #667d8c);
+	background-image: -o-linear-gradient(#EDEDED, #667d8c);
+	background-image: linear-gradient(#EDEDED, #667d8c);
 	font-family: Arial;
   	color: #000;
   	font-size: 15px;
