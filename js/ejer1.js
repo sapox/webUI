@@ -19,6 +19,27 @@ function sieteyCinco(num1){
 		alert("el numero ingresado no es divisible por 7 y 5");
 	}
 }
+/*write an expression that calculates rectangle's area by given width and height*/
+function rectangleArea(width, height){
+	var area = width*height;
+	console.log(area);
+}
+/*write an expression that checks for given integer if its third digit (right-to-left) is 7
+E.g. 1732 = true.*/
+function estaElSiete(num){
+	var salida = [];
+	var conver = num.toString();
+	for (var i=0, len = conver.length; i<len; i+=1){
+		salida.push(+conver.charAt(i));
+	}
+	if(salida[salida.length-3]==7){
+		alert("re loco");
+	}else{
+		alert("no esta el siete");
+	}
+}
+/*write an expression that checks if given positive integer number n(n<=100) is prime. 
+E.g. 37 is prime*/
 function esPrimo(num1){
 	if(num1 != 2){
 		if (num1 % 2 == 0){
