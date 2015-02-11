@@ -7,7 +7,14 @@
 #sidebar{
 	float: left;
 	width: 15%;
-	border:1px solid #ccc;
+
+}
+ul li a{
+	text-decoration: none;
+}
+
+.red{
+	color:red;
 }
 #center{
 	text-indent: 20px;
