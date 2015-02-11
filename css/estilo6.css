@@ -51,10 +51,14 @@ h2{
     background: -webkit-gradient(linear, 0 0, 100% 0, from(grey), to(grey), color-stop(50%, black));
 }
 p{
-	padding: 10px 10px 10px 10px;
+	padding: 5px 5px 10px 10px;
 	font-size: 1em;
 	font-family:Arial;
+	color:#ccc;
 } 
+span{
+	color:#fff;
+}
 h2{
 	padding: 0px 0px 0px 10px;
 }
