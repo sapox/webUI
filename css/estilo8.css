@@ -5,12 +5,16 @@ h3, h4{
 	font-weight: thin;
 	padding-bottom:0px; 
 }
+h3{
+	color:#BF8E0D;
+}
+h4{
+	color:#D9C48D;
+}
 .container{
 	width: 70%;
 	min-height: 80%;
 	margin:0px auto;
-	/*background: #DFD4B5;
-	border:5px solid #8D7E5C;*/
 	border-radius: 0px 0px 10px 10px;
 	float:left;
 	font-family: Arial;
@@ -50,7 +54,6 @@ h3, h4{
 .recent{
 	margin-top: 20px;
 	font-size: 0.9em;
-	/*border: 2px solid #8D7E5C;*/
 	text-align: justify;
 	border-radius: 5px 5px 5px 5px;
 	background: rgb(249,252,247); /* Old browsers */
@@ -94,10 +97,9 @@ h3, h4{
 .center{
 	height: 90%;
 	width: 68%;
-	margin-right: 5px;
-	margin-left: 5px;
+	/*margin-right: 5px;*/
+	margin-left: 29px;
 	float:left;
-	/*border:3px solid #8D7E5C;*/
 }
 .centerx{
 	float:left;
@@ -116,4 +118,26 @@ footer{
 	float:left;
 	text-align: center;
 	background: #DFD4B5;
+}
+.uno{
+	width: 50%;
+	float: left;
+}
+.foot{
+	width: 94px;
+	height: 69px;
+	float:left;
+	padding-left: 2px;
+	padding-right: 2px;
+	border:5px solid #E7E0CE;
+	border-radius: 5px 5px 5px 5px;
+	margin-right: 20px;
+	margin-left: 20px;
+	/*padding-bottom:0.5em;*/
+}
+.un{
+	background: url(../img/arq2.png)-1px -26px;
+}
+.do{
+	background: url(../img/arq2.png)-252px -26px;
 }
