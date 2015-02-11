@@ -1,35 +1,50 @@
-#container{
+.container{
 	width: 50%;
 	min-height: 330px;
 	background: #5E5D5D;
-
 }
-#members{
-	position:relative;
+.members{
 	background: #5E5D5D;
-	vertical-align: middle;
-	text-align: justify;
-	
+	margin:auto 0;
 }
-#text{
+.text{
 	float:left;
+}
+td{
+	margin-left: 10px;
+}
+h3{
+	color:#FFF;
+	font-size: 1.5em;
 }
 h2{
 	color:#FBFF80;
 	font-weight:normal;
 	font-size: 2em;
 }
-#monitor{
+.monitor{
 	width: 50px;
 	height: 53px;
 	background:url(../img/monitor.png);
 }
-#boton{
-	width: 60px;
-	height: 31px;
-	background:url(../img/button.png);
+.boton{
+	width: 58px;
+	height: 30px;
+	padding-top: 15px;
+	padding-right: 20px;
+	background:url(../img/button.png) -3px -3px;
+	border-radius: 15px 15px 15px 15px;
+
 }
-#division{ 
+.centrate{
+	text-align: center;
+	margin:auto 0;
+	line-height: 50px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.division{ 
     margin:0px;
     height: 1px;
     background: black;
