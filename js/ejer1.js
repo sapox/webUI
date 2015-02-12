@@ -41,13 +41,69 @@ function estaElSiete(num){
 /*write an expression that checks if given positive integer number n(n<=100) is prime. 
 E.g. 37 is prime*/
 function esPrimo(num1){
-	if(num1 != 2){
+	if(num1 != 2 && num1<=100){
 		if (num1 % 2 == 0){
 			alert("no es primo");
 		}else{
 			alert("es primo");
 		}
 	}else{
-		alert("no es primo");
+		alert("el numero ingresado es mayor a 100 o es 2");
 	}
 }
+/*write an if statement that examines two integer variables and exchanges their values if the first
+one is greater than the second one*/
+function exchangeG(num1,num2){
+	if(num1>num2){
+		var max = num1;
+		num1 = num2;
+		num2 = max;
+		console.log("num1 = "+num1+" num2 = "+num2);
+	}else if(num1<num2){
+		var max = num2;
+		num2 = num1;
+		num1 = max;
+		console.log("num1 = "+num1+" num2 = "+num2);
+	}else{
+		console.log("son iguales");
+	}
+}
+/*write a script that shows the sign (+ or -) of the product of three real numbers without calculating it.
+Use a sequence of if statemets.*/
+function positivoNegativo(num1,num2,num3){
+	if(num1>0 && num2>0 && num3>0){
+		console.log("el resultado sera +");
+	}else if(num1<0 && num2>0 && num3>0){
+		console.log("el resultado sera -");
+	}else if(num1<0 && num2<0 && num3>0){
+		console.log("el resultado sera +");
+	}else if(num1>0 && num2<0 && num3<0){
+		console.log("el resultado sera +");
+	}else if(num1<0 && num2<0 && num3<0){
+		console.log("el resultado sera -");
+	}else if(num1>0 && num2<0 && num3>0){
+		console.log("el resultado sera -");
+	}else if(num1>0 && num2>0 && num3<0){
+		console.log("el resultado sera -");
+	}else if(num1<0 && num2>0 && num3<0){
+		console.log("el resultado sera -");
+	}
+}
+/*write a script that finds the biggest of three integers using nested if statements*/
+function maGrande(num1,num2,num3){
+	if(num1>num2 && num1>num3){
+		var max = num1;
+		console.log("el mas grande es: "+max);
+	}else if(num2>num1 && num2>num3){
+		var max = num2;
+		console.log("el mas grande es: "+max);
+	}else if(num3>num1 && num3>num2){
+		var max = num3;
+		console.log("el mas grande es: "+max);
+	}else if(num1==num2 && num2==num3){
+		console.log("son iguales");
+	}else{
+		console.log("quepashhoo");
+	}
+}
+/* sort 3 real values in descending order using nested if statements */
