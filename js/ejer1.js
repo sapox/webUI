@@ -107,3 +107,75 @@ function maGrande(num1,num2,num3){
 	}
 }
 /* sort 3 real values in descending order using nested if statements */
+function ordenAr(num1,num2,num3){
+	//el mayor
+	if(num1>num2 && num1>num3){
+		var max = num1;
+		console.log("el mas grande es: "+max);
+	}else if(num2>num1 && num2>num3){
+		var max = num2;
+		console.log("el mas grande es: "+max);
+	}else if(num3>num1 && num3>num2){
+		var max = num3;
+		console.log("el mas grande es: "+max);
+	}else if(num1==num2 && num2>num3){
+		var min = num3;
+		var max = num2;
+		var mid = num1;
+		console.log(+num1+" y "+num2+" son iguales");
+	}else if (num2==num3 && num2>num1){
+		var min = num1;
+		var max = num2;
+		var mid = num3;
+		console.log(+num2+" y "+num3+" son iguales");
+	}
+	//el menor
+		if(num1<num2 && num1<num3){
+			var min = num1;
+			console.log("el mas chico es: "+min);
+		}else if(num2<num1 && num2<num3){
+			var min = num2;
+			console.log("el mas chico es: "+min);
+		}else if(num3<num1 && num3<num2){
+			var min = num3;
+			console.log("el mas chico es: "+min);
+		}else if(num1==num2 && num2<num3){
+			min = num2;
+			max = num3;
+			mid = num1;
+			console.log(num1+" y "+num2+" son iguales");
+		}else if (num2==num3 && num2<num1){
+		var min = num2;
+		var max = num1;
+		var mid = num3;
+		console.log(+num2+" y "+num3+" son iguales");
+		}
+		//el del medio
+			if(num1==max && num2==min){
+				var mid = num3;
+				console.log("el del medio es: "+mid);
+			}else if(num2==max && num3==min){
+				var mid = num1;
+				console.log("el valor medio es "+mid);
+			}else if(num3==max && num1==min){
+				var mid = num2;
+				console.log("el valor medio es "+mid);
+			}else if(num1==num2 && num2==num3){
+				console.log("los 3 ingresos son iguales");
+				var mid = num1; var max = num2; var min = num3; 
+			}else if(num1==num3 && num3<num2){
+				var min = num1;
+				var max = num2;
+				var mid = num3;
+			}
+	console.log("en orden descendente: "+max+" - "+mid+" - "+min);
+}
+/*sort 3 real values in descending order using nested if statements*/
+function sortE(num1,num2,num3){
+	var max = -999999;
+	var min = 999999;
+	var mid = 0;
+	if(num1>num2 && num1>num3){
+		num1=max;
+	}
+}
