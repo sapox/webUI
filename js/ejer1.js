@@ -170,12 +170,21 @@ function ordenAr(num1,num2,num3){
 			}
 	console.log("en orden descendente: "+max+" - "+mid+" - "+min);
 }
-/*sort 3 real values in descending order using nested if statements*/
-function sortE(num1,num2,num3){
-	var max = -999999;
-	var min = 999999;
-	var mid = 0;
-	if(num1>num2 && num1>num3){
-		num1=max;
+/*write script that asks for a digit and depending on the input shows the name of that digit using a switch
+statement*/
+function Nombrar(ingreso){
+	switch (ingreso) 
+	{
+		case 1: console.log("uno");break;
+		case 2: console.log("dos");break;
+		case 3: console.log("tres");break;
+		case 4: console.log("cuatro");break;
+		case 5: console.log("cinco");break;
+		case 6: console.log("seis");break;
+		case 7: console.log("siete");break;
+		case 8: console.log("ocho");break;
+		case 9: console.log("nueve");break;
+		case 10: console.log("diez");break;
+		default: console.log("me canse");break;
 	}
 }
