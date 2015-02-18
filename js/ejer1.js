@@ -277,3 +277,4 @@ for (n in win)
 		i++;
 	}
 //ver q onda con Object.getOwnPropertyNames(window) aunque todos sabemos q funca en ie9>
+//http://jsbin.com/
