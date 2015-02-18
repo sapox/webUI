@@ -185,6 +185,95 @@ function Nombrar(ingreso){
 		case 8: console.log("ocho");break;
 		case 9: console.log("nueve");break;
 		case 10: console.log("diez");break;
-		default: console.log("me canse");break;
+		default: console.log("hasta acá llegamos...");break;
 	}
 }
+/*write a script that finds the greatest of given 5 variables*/
+function maGrande2(num1,num2,num3,num4,num5){
+	if(num1>num2 && num1>num3){
+		var max = num1;
+		console.log("el mas grande es: "+max);
+	}else if(num2>num1 && num2>num3){
+		var max = num2;
+		console.log("el mas grande es: "+max);
+	}else if(num3>num1 && num3>num2){
+		var max = num3;
+		console.log("el mas grande es: "+max);
+	}else if(num1==num2 && num2==num3){
+		console.log("son iguales");
+	}else{
+		console.log("quepashhoo");
+	}
+}
+function MayorDe5(){
+	var max = -9999;
+	var i = 0;
+	while(i<5){
+		var num=prompt("ingrese un numero: ");
+		if(num>max){
+			max=num;
+		}
+		i++;
+	}
+console.log("el mayor fue: "+max);
+}
+
+/*write a script that converst a number in the range [0...999] to a text corresponding to its english
+pronunciation. Examples:
+	0 [] "Zero"
+	273 [] "Two hundred seventy three"
+	400 [] "Four hundred"
+	501 [] "Five hundred and one"
+	711 [] "Seven hundred and eleven"
+
+*/
+
+/* Write a script that prints all the numbers from 1 to N  */
+function todosN(num){
+	for(var i=1;i<=num;i++){
+		console.log(i);
+	}
+}
+/* Write a script that prints all the numbers from 1 to N, 
+that are not divisible by 3 and 7 at the same time */
+function todosN2(num){
+	for(var i=1;i<=num;i++){
+		if((i % 3 != 0) && (i % 7 != 0)){
+			console.log(i);
+		}
+	}
+}
+/*
+Write a script that finds the max and min number 
+from a sequence of numbers
+ */
+function maxMin(){
+	var num = 0;
+	min = 999, max = -999;
+	console.log("ingrese n para terminar");
+	while(num != 'n'){
+			var num=prompt("ingrese un numero: ");
+			if(num>max){
+				max=num;
+			}else if(num<min){
+				min = num;
+			}
+		}
+	console.log("El max es: "+max+" , el minimo es: "+min);
+}
+/*
+Write a script that finds the lexicographically 
+smallest and largest property in document, window and navigator objects
+
+ */
+var win = window;
+var d = document;
+var nav = navigator;
+for (n in win)
+	{
+		if(n[i]>n[i+1]){
+			max = n[i];
+		}
+		i++;
+	}
+//ver q onda con Object.getOwnPropertyNames(window) aunque todos sabemos q funca en ie9>
