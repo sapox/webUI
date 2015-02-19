@@ -277,4 +277,20 @@ for (n in win)
 		i++;
 	}
 //ver q onda con Object.getOwnPropertyNames(window) aunque todos sabemos q funca en ie9>
-//http://jsbin.com/
+//editor online -> http://jsbin.com/
+//
+//Write a script that allocates array of 20 integers 
+//and initializes each element by its index multiplied by 5. 
+//Print the obtained array on the console.
+//
+function arreglo(){
+		var arr = [];
+		//inicializar arreglo con el resultado de multiplicar el indice * 5
+		for (var a=0;a<20;a++){
+			arr[a] = a * 5;
+		}
+	//recorrer
+	for (var e=0;e<arr.length;e++){
+		console.log(arr[e]);
+	}
+}
