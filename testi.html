@@ -1,0 +1,32 @@
+<script>
+	function Player(){
+		this.name;
+		this.hitpoints = 100;
+		this.attack = function attack(opponent){
+			opponent.hitpoints -= 10;
+			alert(this.name+" recien le golpeo a "+opponent.name);
+		}
+	}
+var p1 = new Player();
+var p2 = new Player();
+p1.name = "Conan";
+p2.name = "Roberto";
+p1.attack(p2);
+alert(p2.name+" ahora tiene "+p2.hitpoints+" de vida");
+Player.prototype.heal = function heal(targetPlayer){
+	targetPlayer.hitpoints += 5;
+};
+p1.heal(p2);
+alert(p2.name+" ahora tiene "+p2.hitpoints+" de vida");
+alert(p1.name+" ahora tiene "+p1.hitpoints+" de vida");
+
+Player.prototype.energy = 200;
+alert(p1.energy);
+alert(p2.energy);
+
+function Animal(){
+	this.mamifero = true;
+	this.patas;
+	this.nombre;
+}
+</script>
