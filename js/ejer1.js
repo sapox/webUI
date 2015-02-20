@@ -307,30 +307,31 @@ var sum2=0;
 var i=0;
 while(i<len1)
 {
-if(str1.charCodeAt(i)<97)
-sum1+=str1.charCodeAt(i)+32;
-else
-sum1+=str1.charCodeAt(i);
-i++;
+	if(str1.charCodeAt(i)<97)
+		sum1+=str1.charCodeAt(i)+32;
+	else
+		sum1+=str1.charCodeAt(i);
+		i++;
 }
 i=0;
 while(i<len2)
 {
-if(str2.charCodeAt(i)<97)
-sum2+=str2.charCodeAt(i)+32;
-else
-sum2+=str2.charCodeAt(i);
-i++;
+	if(str2.charCodeAt(i)<97)
+		sum2+=str2.charCodeAt(i)+32;
+	else
+		sum2+=str2.charCodeAt(i);
+		i++;
 }
 document.write(sum1);
 document.write('<br/>'+sum2+'<br/>');
-if(sum1>sum2)
-return 1;
-else if(sum1<sum2)
-return -1;
-else if(sum1 ==sum2)
-return 0;
+	if(sum1>sum2)
+		return 1;
+	else if(sum1<sum2)
+		return -1;
+	else if(sum1 ==sum2)
+		return 0;
 }
+
 //prueba prototype
 var Persona = function() {
 	this.habla = true;
