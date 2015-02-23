@@ -354,3 +354,15 @@ var Empleado = function(nombre, cargo) {
 Empleado.prototype = New Persona();
 var omar = new empleado('Omar','Albañil');
 omar.saludo();
+/* 
+Write a script that finds the maximal sequence 
+of equal elements in an array.
+		Example: {2, 1, 1, 2, 3, 3, 2, 2, 2, 1} {2, 2, 2}
+
+*/
+
+arr = [2,2,2,4,4,3,3,1,2,3];
+for (var a = 0; a < arr.length;a++){
+	if(arr[a]==arr[a+1] && arr[a+1]==arr[a+2])
+		console.log("se repite el "+arr[a]);
+}
