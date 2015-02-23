@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	//video de la 49, slides de 50 a 58
+	function ParentClass(){
+		this.parent_property1 = "hola";
+		this.parentmethod1 = function parentmethod1(arg1){
+			return arg1+" Parent method 1 return data ... ";
+		}
+	}
+	function ChildClass(){
+		this.child_property1 = "adios";
+		this.childmethod1 = function childmethod1(arg1){
+			return arg1+" Child method 1 return data ... ";
+		}
+	}
+	ChildClass.prototype = new ParentClass();
+	var instance1 = new ChildClass();
+	//alert(instance1 instanceof ParentClass);
+	//alert(instance1 instanceof ChildClass);
+	alert(instance1.parentmethod1("result: "));
+	alert(instance1.childmethod1("result: "));
+	alert(instance1.parent_property1);
+	alert(instance1.child_property1);
+	ChildClass.prototype.parentmethod1 = function parentmethod1(arg1){
+		return arg1+" I have overridden parent method1 ";
+	}
+	alert(instance1.parentmethod1("Result: "));
+	</script>
+</body>
+</html>
