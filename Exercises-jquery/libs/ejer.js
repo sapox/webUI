@@ -50,4 +50,32 @@ $(document).ready(function(){
 	var firstLi = $('#slideshow').children().eq(0);
 	firstLi.addClass("current");
 	firstLi.siblings().addClass("disabled");
+//
+//
+//Add five new list items to the end of the unordered list #myList
+	var ultimoLi = $('#myList').children().last();
+	var li1 = "<li>List Item 8</li>"
+	var li2 = "<li>List Item 9</li>"
+	var li3 = "<li>List Item 10</li>"
+	var li4 = "<li>List Item 11</li>"
+	var li5 = "<li>List Item 12</li>"
+	ultimoLi.after(li1,li2,li3,li4,li5);
+//Remove the odd list items
+	var listaImp = $('#myList');
+	listaImp.children('li:odd').remove();
+//Add another h2 and another paragraph to the last div.module
+	var achep = "<h2>Specials2</h2>"
+	var parrafo = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quasi vitae quisquam dolore accusamus suscipit beatae aspernatur labore minima reiciendis ipsam, aperiam ipsum numquam cupiditate voluptatibus quam? Earum, iure, voluptatum.</p>"
+	var ultimoDiv = $('div.module').last();
+	ultimoDiv.append(achep, parrafo);
+//Add another option to the select element
+//Give the option the value "Wednesday"
+	var opcion = '<option value="Wednesday">Wednesday</option>';
+	var selec = $('select');
+	selec.append(opcion);
+//Add a new div.module to the page after the last one
+//Put a copy of one of the existing images inside of it
+	var adentro='<div class="module"><h2>El nuevo</h2><img src="images/vegetable.jpg" alt="vegetables" /><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates possimus atque, dolorem, ut maxime impedit. Consectetur natus eaque ut quo quas soluta et fugit. Odit natus ratione impedit, cupiditate vel.</p></div>';
+	var nuevo = $('div').last().append();
+	nuevo.append(adentro);
 });
