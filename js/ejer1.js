@@ -332,28 +332,7 @@ document.write('<br/>'+sum2+'<br/>');
 		return 0;
 }
 
-//prueba prototype
-var Persona = function() {
-	this.habla = true;
-	this.nacionalidad = 'Argentino';
-	this.saludo = function(){
-		if(this.habla){
-			console.log('Hola, soy' +this.nombre);
-		}
-	};
-};
-var Empleado = function(nombre, cargo) {
-	this.nombre = nombre;
-	this.cargo = cargo;
-	this.saludo = function(){
-		if(this.habla){
-			console.log('Hola soy '+this.nombre+', y me desempeño como '+this.cargo+', nací en '+this.nacionalidad);
-		}
-	};
-};
-Empleado.prototype = New Persona();
-var omar = new empleado('Omar','Albañil');
-omar.saludo();
+
 /* 
 Write a script that finds the maximal sequence 
 of equal elements in an array.
@@ -366,3 +345,43 @@ for (var a = 0; a < arr.length;a++){
 	if(arr[a]==arr[a+1] && arr[a+1]==arr[a+2])
 		console.log("se repite el "+arr[a]);
 }
+//-----------------------------------------//
+//Write a function that returns the last digit of given integer as an English word. Examples: 512  "two", 1024  "four", 12309  "nine"
+//Write a function that reverses the digits of given decimal number. Example: 256  652
+//Write a function that finds all the occurrences of word in a text
+//The search can case sensitive or case insensitive
+//Use function overloading
+//Write a function to count the number of divs on the web page
+//Write a function that counts how many times given number appears in given array. Write a test function to check if the function is working correctly.
+
+//Write a function that checks if the element at given position in given array of integers is bigger than its two neighbors (when such exist).
+//Write a function that returns the index of the first element in array that is bigger than its neighbors, or -1, if there’s no such element.
+//Use the function from the previous exercise.
+//-------------/==---==/-------------------//
+function arregloC(){
+	var rep = 0;
+	var ingreso = prompt("Ingrese los numeros que estaran en el arreglo");
+	var salida = ingreso.toString().split('');
+	var control = prompt("Ingrese el numero que desea controlar");
+	for(var a=0;a<salida.length;a++){
+		if(control === salida[a]){
+			rep++;
+		}
+	}
+	console.log("el numero "+control+", aparece "+rep+" veces");
+	return salida;
+}
+
+//--------------/STRINGS/--------------------------//
+//Write a JavaScript function reverses string and returns it
+//Example: "sample"  "elpmas".
+//Write a JavaScript function to check if in a given expression the brackets are put correctly.
+//Example of correct expression: ((a+b)/5-d).
+//Example of incorrect expression: )(a+b)).
+//Write a JavaScript function that finds how many times a substring is contained in a given text (perform case insensitive search).
+//		Example: The target substring is "in". The text is as follows:
+//We are living in an yellow submarine. We don't have anything else. 
+//Inside the submarine is very tight. So we are drinking all the day. 
+//We will move out of it in 5 days.
+
+//	The result is: 9.

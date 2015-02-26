@@ -84,3 +84,71 @@ function vehiculo(){
  	
  }
 }
+
+function prueba(){
+	this.contenido = "hola";
+	this.calculo = 2+3;
+	this.saludar = function(nombre){
+		console.log("hola "+nombre);
+	}
+}
+
+var b = {
+	contenido: "hola",
+	calculo: function(num1,num2){return num1+num2},
+	saludar: function(nombre){console.log("hola "+nombre);}
+};
+//-------------------/parasitic inheritance/-----------------
+function gizmo(id) {
+    return {
+        id: id,
+        toString: function () {
+            return "gizmo " + this.id;
+        }
+    };
+}
+
+function hoozit(id) {
+    var that = gizmo(id);
+    that.test = function (testid) {
+        return testid === this.id;
+    };
+    return that;
+}
+
+//---------------------/secrets/-----------------------
+//basicamente, sabemos q hay un id, pero no tenemos acceso a el, 
+//solo podemos asignarlo cuando creamos el objeto, despues no
+function gizmo(id) {
+    return {
+        toString: function () {
+            return "gizmo " + id;
+        }
+    };
+}
+
+function hoozit(id) {
+    var that = gizmo(id);
+    that.test = function (testid) {
+        return testid === id;
+    };
+    return that;
+}
+//------------------/shared secrets/-----------------------------
+function gizmo(id, secret) {
+    secret = secret || {};
+    secret.id = id;
+    return {
+        toString: function () {
+            return "gizmo " + secret.id; }
+    }
+}
+
+function hoozit(id) {
+    var s = {},
+        that = gizmo(id, s);
+    that.test = function (testid) {
+        return testid === s.id;
+    };
+    return that;
+}
