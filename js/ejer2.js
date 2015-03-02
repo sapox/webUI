@@ -33,6 +33,11 @@ $(function(){
 //Miercoles -> leer slides de la 62 a 72 | 75 y 76
 
 //prueba prototype
+//localstorage
+//// Store
+//localStorage.setItem("lastname", "Smith");
+// Retrieve
+//document.getElementById("result").innerHTML = localStorage.getItem("lastname");
 var Persona = function() {
 	this.habla = true;
 	this.nacionalidad = 'Argentino';
