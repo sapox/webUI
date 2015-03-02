@@ -1,0 +1,13 @@
+Notas sobre el proyecto:
+------------------------
+- abm de usuarios, en realidad localStorage
+- solo visualizar los comis prestados
+
+---------------------------------------------
+4. As a comics site, I should be able to display a header with comics advertising.
+AC:
+The site should display a header.
+The header should contain advertising about comics.
+Estimated time: 3hs
+Order: 1
+
