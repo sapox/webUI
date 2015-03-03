@@ -10,30 +10,41 @@ background: url(../img/slide3.jpg);
 .slide4{
 background: url(../img/slide4.jpg);
 }
-.volador #vuela, .volador #vuela2{
-width: 45%;
-float: left;
-}
 .icono{
-display:block;
 float: left;
 width: 201px;
 height: 110px;
-margin-right: 15px;
-margin-left: 15px;
-margin-top: 40px;
 border-radius: 5px;
 }
-.volador{
-width: 90%;
-height: 350px;
-position: absolute;
-top: 200px;
+.slid{
+width: 50%;
+height: 190px;
 background-color:#8B9A22;
-left:5%;
 border: 7px solid #fff;
 box-shadow: 5px 5px 5px 5px #aaa;
 -webkit-box-shadow: 5px 5px 5px 5px #aaa;
 -moz-box-shadow: 5px 5px 5px 5px #aaa;
 -o-box-shadow: 5px 5px 5px 5px #aaa; 
+margin-left: 24%;
+}
+header{
+	width:100%;
+	min-height: 30%;
+	text-align: center;
+	float:left;
+}
+#wrapper{
+	width: 100%;
+	margin: 0 auto;
+}
+#prueba{
+	text-align: center;
+	font-family: 'actionj';
+	font-size: 3em;
+	margin-bottom: -70px;
+	margin-top: -50px;
+}
+@font-face{
+	font-family: 'actionj';
+	src:url(../fonts/actionj.ttf);
 }
