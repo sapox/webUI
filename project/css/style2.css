@@ -9,6 +9,13 @@ body{
 	display: block;
 	font-family: arial;
 }
+.sec2{
+	width: 20%;
+	float:left;
+	margin-left: 2%;
+	display: block;
+	font-family: arial;
+}
 .slide1{
 background: url(../img/slide1.jpg);
 }
@@ -21,22 +28,38 @@ background: url(../img/slide3.jpg);
 .slide4{
 background: url(../img/slide4.jpg);
 }
+.punio{
+	height: 125px;
+	width: 125px;
+	margin-left: 11%;
+	background:url(../img/hulkk.png);
+}
 .icono{
 float: left;
 width: 201px;
 height: 110px;
 border-radius: 5px;
 }
+.icono2{
+float: left;
+width: 103px;
+height: 125px;
+border-radius: 5px;
+border: 7px solid #aaa;
+}
+.comic{
+	background:url(../img/marvel.jpg);
+	margin-left: 12%;
+}
 .slid{
 width: 50%;
 height: 190px;
-/*background-color:#8B9A22;*/
 border: 7px solid #fff;
 box-shadow: 5px 5px 5px 5px #aaa;
 -webkit-box-shadow: 5px 5px 5px 5px #aaa;
 -moz-box-shadow: 5px 5px 5px 5px #aaa;
 -o-box-shadow: 5px 5px 5px 5px #aaa; 
-margin-left: 24%;
+margin-left: 20%;
 }
 header{
 	width:100%;
@@ -57,34 +80,77 @@ header{
 	margin-top: -50px;
 }
 #content{
-	height: 200px;
-	margin-top: 30px;
+	height: 300px;
+	margin-top: 20px;
 	float:left;
-	/* color:#60A0E7;  batman */
+	border: 2px solid #000;
+	border-style:dashed;
+	margin-left: 20%;
 }
 @font-face{
 	font-family: 'actionj';
 	src:url(../fonts/actionj.ttf);
 }
 footer{
-	height: 500px;
+	height: 250px;
 	width: 100%;
+	background:#ccc;
 	float:left;
-	/*border-radius: 0px 0px 15px 15px;*/
-	color:white;
-
+	position: absolute;
+	bottom: 10px;
+	color:rgb(66, 57, 57);
 }
 .intento{
-	height: 389px;
+	height: 160px;
 	width: 100%;
-	background:url(../img/ciudadB.png) no-repeat center top -77px;
-	float:left; 
+	background:url(../img/skyline1.png) repeat center top 0px;
+	position:absolute;
+	bottom: 0px; 
 	background-clip:
 }
 .intento .sec1{
 	width: 20%;
 	margin-left: 10%;
 }
-.intento .sec1 p{
-	margin-top: 250px;
+.sidebar{
+	width: 15%;
+	height: 50%;
+	background-color: #CCCCCC;
+	position: absolute;
+	left:2%;
+	top:13%;
+	border: 2px solid #000;
+	border-style:dashed;
+}
+.sidebar a{
+	text-decoration: none;
+}
+.sidebar li{
+	list-style: none;
+}
+.sidebar a:hover{
+	background-color: #ccc;
+	display: block;
+	width: 90px;
+}
+.texto{
+	font-family: 'chicken';
+	font-size: 2.5em;
+}
+@font-face{
+	font-family: 'chicken';
+	src:url(../fonts/ChickenButt.ttf);
+}
+ul, li{
+	margin: 3%;
+	padding: 0;
+}
+.login{
+	float:left;
+	width: 20%;
+	height: 200px;
+	display: table-cell;
+	border: 2px solid #000;
+	border-style:dashed;
+	margin-left: 5%;	
 }
