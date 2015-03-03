@@ -11,3 +11,7 @@ The header should contain advertising about comics.
 Estimated time: 3hs
 Order: 1
 
+
+login > index
+
+UI 1 Y 2 implementadas, 3 -> no deberia estar implementada, un nombre de usuario en algun lado. 4 -> se tiene q mostrar el header, 5-> implementar un footer con informacion, 6-> mostrar una sidebar, 7 -> no tiene q ser implementada, 8 tampoco (tener listo para hacer la busqueda, un search o algo por el estilo),  9 -> vista de usuarios con prestamos, 10 ver mi cuenta, profile, etc. 11- opciones usuario botones no activos; 12 y 13 no implementados

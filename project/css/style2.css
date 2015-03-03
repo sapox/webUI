@@ -1,3 +1,14 @@
+body{
+	background: #ccd222;
+	height: 100%;
+}
+.sec1{
+	width: 30%;
+	float:left;
+	margin-left: 2%;
+	display: block;
+	font-family: arial;
+}
 .slide1{
 background: url(../img/slide1.jpg);
 }
@@ -19,7 +30,7 @@ border-radius: 5px;
 .slid{
 width: 50%;
 height: 190px;
-background-color:#8B9A22;
+/*background-color:#8B9A22;*/
 border: 7px solid #fff;
 box-shadow: 5px 5px 5px 5px #aaa;
 -webkit-box-shadow: 5px 5px 5px 5px #aaa;
@@ -35,7 +46,8 @@ header{
 }
 #wrapper{
 	width: 100%;
-	margin: 0 auto;
+	height: 50%;
+	float:left;
 }
 #prueba{
 	text-align: center;
@@ -44,7 +56,35 @@ header{
 	margin-bottom: -70px;
 	margin-top: -50px;
 }
+#content{
+	height: 200px;
+	margin-top: 30px;
+	float:left;
+	/* color:#60A0E7;  batman */
+}
 @font-face{
 	font-family: 'actionj';
 	src:url(../fonts/actionj.ttf);
+}
+footer{
+	height: 500px;
+	width: 100%;
+	float:left;
+	/*border-radius: 0px 0px 15px 15px;*/
+	color:white;
+
+}
+.intento{
+	height: 389px;
+	width: 100%;
+	background:url(../img/ciudadB.png) no-repeat center top -77px;
+	float:left; 
+	background-clip:
+}
+.intento .sec1{
+	width: 20%;
+	margin-left: 10%;
+}
+.intento .sec1 p{
+	margin-top: 250px;
 }

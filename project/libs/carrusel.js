@@ -19,8 +19,8 @@ setTimeout("slid1()",5000);
 function slid3(){
  	$("img.icono.slid").removeClass("slide3");
  	$("img.icono.slid").addClass("slide4");
- 	$(".slide1").css({"background-position":"1000px"});
- 	$(".slide1").animate({"background-position":"0px"});
+ 	$(".slide4").css({"background-position":"1000px"});
+ 	$(".slide4").animate({"background-position":"0px"});
  	setTimeout("slid4()",5000);
 	}
 function slid4(){
