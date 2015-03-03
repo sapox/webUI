@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>probando</title>
+
+	<style>
+		.slide1{
+		background: url(img/slide1.jpg);
+		}
+		.slide2{
+		background: url(img/slide2.jpg);
+		}
+		.slide3{
+		background: url(img/slide3.jpg);
+		}
+		.slide4{
+		background: url(img/slide4.jpg);
+		}
+		.volador #vuela, .volador #vuela2{
+		width: 45%;
+		float: left;
+		margin-top: 40px;
+		margin-left:40px;
+		}
+		.icono{
+		display:block;
+		float: left;
+		width: 201px;
+		height: 110px;
+		margin-right: 15px;
+		margin-left: 15px;
+		margin-top: 40px;
+		border-radius: 5px;
+		}
+		.volador{
+		width: 90%;
+		height: 350px;
+		position: absolute;
+		top: 200px;
+		background-color:#8B9A22;
+		left:5%;
+		border: 7px solid #fff;
+		box-shadow: 5px 5px 5px 5px #aaa;
+		-webkit-box-shadow: 5px 5px 5px 5px #aaa;
+		-moz-box-shadow: 5px 5px 5px 5px #aaa;
+		-o-box-shadow: 5px 5px 5px 5px #aaa; 
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<ul class="slides"></ul>
+		<ul class="controls"></ul>
+	</header>
+	<section class="sec1">
+		<div id="buscador">
+			<input type="search" placeholder="buscar:">
+		</div>
+				
+			<div class="volador">
+				<div id="vuela">
+					<p>
+					<strong><h1>Make your Online Presence Felt with the help of Provus</h1></strong></p>
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, animi, ut, officia debitis accusamus minima placeat sed ex necessitatibus perferendis aut dicta quisquam quo earum dolorum atque tempora voluptates tempore.
+						</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, doloremque, autem, repellendus deleniti hic voluptate tenetur provident fugit quasi optio aut velit molestias vitae incidunt voluptatum beatae quidem error voluptates.</p>
+					</div>
+	 			<div id="vuela2">
+					<img class="icono slide1 volador">
+					<!-- 69 - 200 px -->
+			</div>
+		</div>
+	</section>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="libs/model.js"></script>
+	<!-- carrousel -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+		});
+		function slid1(){
+		 	$("img.icono.volador").removeClass("slide1");
+		 	$("img.icono.volador").addClass("slide2");
+		 	$(".slide2").css({"background-position":"1000px"});
+		 	$(".slide2").animate({"background-position":"0px"});
+		 	setTimeout("slid2()",5000);
+		}
+		setTimeout("slid1()",5000);
+
+		function slid2(){
+		 	$("img.icono.volador").removeClass("slide2");
+		 	$("img.icono.volador").addClass("slide3");
+		 	$(".slide3").css({"background-position":"1000px"});
+		 	$(".slide3").animate({"background-position":"0px"});
+		 	setTimeout("slid3()",5000);
+		}
+		function slid3(){
+		 	$("img.icono.volador").removeClass("slide3");
+		 	$("img.icono.volador").addClass("slide4");
+		 	$(".slide1").css({"background-position":"1000px"});
+		 	$(".slide1").animate({"background-position":"0px"});
+		 	setTimeout("slid4()",5000);
+		}
+		function slid4(){
+		 	$("img.icono.volador").removeClass("slide4");
+		 	$("img.icono.volador").addClass("slide1");
+		 	$(".slide1").css({"background-position":"1000px"});
+		 	$(".slide1").animate({"background-position":"0px"});
+		 	setTimeout("slid1()",5000);
+		}
+	</script>
+</body>
+</html>
