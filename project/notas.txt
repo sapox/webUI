@@ -11,7 +11,22 @@ The header should contain advertising about comics.
 Estimated time: 3hs
 Order: 1
 
+sessionStorage -> temas de sesion
 
 login > index
 
 UI 1 Y 2 implementadas, 3 -> no deberia estar implementada, un nombre de usuario en algun lado. 4 -> se tiene q mostrar el header, 5-> implementar un footer con informacion, 6-> mostrar una sidebar, 7 -> no tiene q ser implementada, 8 tampoco (tener listo para hacer la busqueda, un search o algo por el estilo),  9 -> vista de usuarios con prestamos, 10 ver mi cuenta, profile, etc. 11- opciones usuario botones no activos; 12 y 13 no implementados
+
+----------------------------------------------
+7. As a user authenticated, I must be able to select the following tabs: Genres, Editions, News and Characters.
+AC:
+The site should display minimum the following tabs: Genres, Editions, news and characters.
+The Genres tab should contain information about the comics classification (science fiction, superheroes, others)
+The Edition tab should contain information about the comics history (date, creator, edition, editions specials and others)
+The News tab should display information about the new comics, the most loans, new videos, new games and others. 
+The characters tab allows to search different characters (for genre and others).
+Estimated time: 3hs
+Order: 3
+
+---------------------
+puede ser interesante para mirar despues... http://nodeschool.io/#workshoppers
