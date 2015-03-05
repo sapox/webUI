@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>backbone</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		.login{
+			width: 200px;
+			float:right;
+			display: none;
+		}
+		.panel-primary > .panel-heading{
+			background-color: #3FAB48;
+			border-color: #3FAB48;
+		}
+		#loggeo{
+			float:right;
+			position:absolute;
+			right: 5px;
+			top:10px;
+		}
+	</style>
+</head>
+<body>
+	<h2>probando backbone</h2>
+	<form id="new-tweet">
+		<label>Author:</label><input id="author-name" name="author-name" type="text">
+		<label>Status:</label><input id="status" name="status" type="text">
+		<button>Tweetear!</button>
+	</form>
+	<button id="loggeo" class="btn btn-info btn-lg" onclick="mostrar();">Login</button>
+	<hr />
+	<div class="login">
+		<div  class="panel panel-primary form" >
+			<div class="panel-heading" >
+				<Strong>LOGGEATE CHAVAL</Strong>
+			</div>
+
+			<div class="panel-body">
+				<div class="form-group">
+					<label for="inputName">User Name</label>
+					<input type="text" class="form-control" id="userName" placeholder="User Name" />
+				</div>
+				<div class="form-group"> 
+					<label for="inputPass">Password</label>
+					<input type="password" class="form-control" id="userPass" placeholder="Password" />
+				</div>
+				<button id="btnLogin" class="btn btn-success ">Login</button>
+				<button id="btnSignUp" class="btn btn-info ">Sign up</button>
+				<p id="login_error" class="bg-danger"></p>
+			</div>
+		</div>
+	</div>
+<script src="libs/jquery-1.11.2.js"></script>
+<script src="libs/underscore-min.js"></script>
+<script src="libs/backbone-min.js"></script>
+<script src="libs/backbone.localStorage.js"></script>
+<script>
+	function mostrar(){
+			if($('#loggeo').text()==="Login"){
+				$('.login').show("fast",function(){
+					$('#loggeo').text("hide");
+				});
+			}else if($('#loggeo').text()==="hide"){
+				$('.login').hide("fast", function(){
+					$('#loggeo').text("Login");
+				});
+			}
+		}
+	(function($){
+
+		//modelos
+		var User = Backbone.Model.extend({
+			defaults: function(){
+				return{
+					name:'',
+					pass:''
+				}
+			}
+		});
+		var Tweet = Backbone.Model.extend({
+			defaults: function(){
+				return{
+					author:'',
+					status:''
+				}
+			}
+
+		});
+		var TweetList = Backbone.Collection.extend({
+			model: Tweet
+		});
+
+		var tweets = new TweetList();
+		//vista
+		var TweetView = Backbone.View.extend({
+			model: new Tweet(),
+			tagName: 'div',
+			initialize: function(){
+				this.template = _.template($('#tweet-template').html());
+			},
+			render: function(){
+				this.$el.html(this.template(this.model.toJSON()));
+				return this;
+			}
+		});
+		//https://www.youtube.com/watch?v=2BDGBJUtAmo  (29:51)
+		var TweetsView = Backbone.View.extend({
+			model: tweets,
+			el: $('#tweets-container'),
+			render: function(){
+				var self = this;
+				_.each(this.model, function(tweet, i){
+					self.$el.append((new TweetView({model: tweet})).render().$el);
+				});
+			}
+		});
+
+		$(document).ready(function(){
+			$('#new-tweet').submit(function(ev){
+				var tweet = new Tweet({author:$('#author-name').val(), status:$('#status').val()});
+				tweets.add(tweet);
+				console.log(tweets.toJSON());
+				
+				return false;
+			});
+		});
+		
+
+	})(jQuery);
+</script>
+<!-- extraños templates de ayer y hoy presentan -->
+<script type="text/template" id="tweet-template">
+	<span class="author"><%= author %>:</span>
+	<span class="status"><%= status %>:</span>
+</script>
+</body>
+</html>
