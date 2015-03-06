@@ -1,0 +1,21 @@
+.login{
+	width: 200px;
+	float:right;
+	display: none;
+}
+.panel-primary > .panel-heading{
+	background-color: #3FAB48;
+	border-color: #3FAB48;
+}
+#loggeo{
+	float:right;
+	position:absolute;
+	right: 5px;
+	top:10px;
+}
+.loggeado{
+	display:none;
+	float:right;
+	color:#E67272;
+	font-size: 1em;
+}

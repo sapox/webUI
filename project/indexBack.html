@@ -20,6 +20,12 @@
 			right: 5px;
 			top:10px;
 		}
+		.loggeado{
+			display:none;
+			float:right;
+			color:#E67272;
+			font-size: 1em;
+		}
 	</style>
 </head>
 <body>
@@ -30,6 +36,7 @@
 		<button>Tweetear!</button>
 	</form>
 	<button id="loggeo" class="btn btn-info btn-lg" onclick="mostrar();">Login</button>
+	<div class="loggeado"><p>Loggeado como: <%= user %></p></div>
 	<hr />
 	<div class="login">
 		<div  class="panel panel-primary form" >
@@ -52,88 +59,16 @@
 			</div>
 		</div>
 	</div>
-<script src="libs/jquery-1.11.2.js"></script>
-<script src="libs/underscore-min.js"></script>
-<script src="libs/backbone-min.js"></script>
-<script src="libs/backbone.localStorage.js"></script>
-<script>
-	function mostrar(){
-			if($('#loggeo').text()==="Login"){
-				$('.login').show("fast",function(){
-					$('#loggeo').text("hide");
-				});
-			}else if($('#loggeo').text()==="hide"){
-				$('.login').hide("fast", function(){
-					$('#loggeo').text("Login");
-				});
-			}
-		}
-	(function($){
-
-		//modelos
-		var User = Backbone.Model.extend({
-			defaults: function(){
-				return{
-					name:'',
-					pass:''
-				}
-			}
-		});
-		var Tweet = Backbone.Model.extend({
-			defaults: function(){
-				return{
-					author:'',
-					status:''
-				}
-			}
-
-		});
-		var TweetList = Backbone.Collection.extend({
-			model: Tweet
-		});
-
-		var tweets = new TweetList();
-		//vista
-		var TweetView = Backbone.View.extend({
-			model: new Tweet(),
-			tagName: 'div',
-			initialize: function(){
-				this.template = _.template($('#tweet-template').html());
-			},
-			render: function(){
-				this.$el.html(this.template(this.model.toJSON()));
-				return this;
-			}
-		});
-		//https://www.youtube.com/watch?v=2BDGBJUtAmo  (29:51)
-		var TweetsView = Backbone.View.extend({
-			model: tweets,
-			el: $('#tweets-container'),
-			render: function(){
-				var self = this;
-				_.each(this.model, function(tweet, i){
-					self.$el.append((new TweetView({model: tweet})).render().$el);
-				});
-			}
-		});
-
-		$(document).ready(function(){
-			$('#new-tweet').submit(function(ev){
-				var tweet = new Tweet({author:$('#author-name').val(), status:$('#status').val()});
-				tweets.add(tweet);
-				console.log(tweets.toJSON());
-				
-				return false;
-			});
-		});
-		
-
-	})(jQuery);
-</script>
+	<div id="tweets-container"></div>
+<script src="js/libs/jquery-1.11.2.js"></script>
+<script src="js/libs/underscore-min.js"></script>
+<script src="js/libs/backbone-min.js"></script>
+<script src="js/libs/backbone.localStorage.js"></script>
+<script src="js/libs/prueba.js"></script>
 <!-- extraños templates de ayer y hoy presentan -->
 <script type="text/template" id="tweet-template">
 	<span class="author"><%= author %>:</span>
-	<span class="status"><%= status %>:</span>
+	<span class="status"><%= status %></span>
 </script>
 </body>
 </html>
