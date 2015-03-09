@@ -7,9 +7,6 @@ App.Router = Backbone.Router.extend({
 		'' 					: 'Login',
 		'Home' 				: 'Home',		
 		'SignUp' 			: 'SignUp',
-		'ComicsManagment' 	: 'ComicsManagment',
-		'AvailableComics'	: 'AvailableComics',
-		'Videos'			: 'Videos',
 		'User'				: 'User'
 
 	},
@@ -26,18 +23,6 @@ App.Router = Backbone.Router.extend({
     	this.Render(App.SignUpView,"SignUp");	
 
 		},
-	ComicsManagment:function () { 
-    	this.Render(App.ComicsManagmentView,"ComicsManagment");	
-
-		},
-	AvailableComics:function () { 
-    	this.Render(App.AvailableComicsView,"AvailableComics");	
-
-		},
-	Videos:function () { 
-    	this.Render(App.VideoComicsView,"Videos");	
-
-		},
 	User:function () { 
     	this.Render(App.UserView,"User");	
 
@@ -51,4 +36,3 @@ App.Router = Backbone.Router.extend({
 	}	 
 
 });
-
