@@ -9,36 +9,53 @@
 </head>
 <body>
 <div class="container">
-	<header>
-		<button id="loggeo" class="btn btn-info btn-lg" onclick="mostrar();">Login</button>
-		<script type="text/template" id="loginn">
-			<div class="loggeado"><p>Loggeado como: <%= user %></p></div>
-		</script>
-		<img class="icono slide1 slid" />	
+	<div id="wrap">
+		<header>
+			<button id="loggeo" class="btn btn-info btn-lg" onclick="mostrar();">Login</button>
+			<script type="text/template" id="loginn">
+				<div class="loggeado"><p>Loggeado como: <%= user %></p></div>
+			</script>
+			<img class="icono slide1 slid" />	
+			<hr />
+		</header>
 		<hr />
-		<div class="login">
-				<div  class="panel panel-primary form" >
-					<div class="panel-heading" >
-						<Strong>LOGGEATE CHAVAL</Strong>
-					</div>
+				<div class="login">
+						<div  class="panel panel-primary form" >
+							<div class="panel-heading" >
+								<Strong>LOGGEATE CHAVAL</Strong>
+							</div>
 
-					<div class="panel-body">
-						<div class="form-group">
-							<label for="inputName">User Name</label>
-							<input type="text" class="form-control" id="userName" placeholder="User Name" />
+							<div class="panel-body">
+								<div class="form-group">
+									<label for="inputName">User Name</label>
+									<input type="text" class="form-control" id="userName" placeholder="User Name" />
+								</div>
+								<div class="form-group"> 
+									<label for="inputPass">Password</label>
+									<input type="password" class="form-control" id="userPass" placeholder="Password" />
+								</div>
+								<button id="btnLogin" class="btn btn-success ">Login</button>
+								<button id="btnSignUp" class="btn btn-info ">Sign up</button>
+								<p id="login_error" class="bg-danger"></p>
+							</div>
 						</div>
-						<div class="form-group"> 
-							<label for="inputPass">Password</label>
-							<input type="password" class="form-control" id="userPass" placeholder="Password" />
-						</div>
-						<button id="btnLogin" class="btn btn-success ">Login</button>
-						<button id="btnSignUp" class="btn btn-info ">Sign up</button>
-						<p id="login_error" class="bg-danger"></p>
-					</div>
 				</div>
-		</div>
-	</header>
-	<hr />
+				<!-- aca tendria q mandarle una vista -->
+			<script id="TmpMessage" type="text/template">
+			</script>
+		<footer>
+				<section class="sec1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint atque doloribus placeat nemo nam possimus minima distinctio praesentium. </p>
+				</section>
+				<section class="sec1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint atque doloribus placeat nemo nam possimus minima distinctio praesentium. </p>
+				</section>
+				<section class="sec1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint atque doloribus placeat nemo nam possimus minima distinctio praesentium. </p>
+				</section>
+		</footer>
+		<div class="intento">		
+	</div>
 </div>
 <!-- librerias -->
 <script src="js/libs/jquery-1.11.2.js"></script>
