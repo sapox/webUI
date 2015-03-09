@@ -2,37 +2,41 @@
 <html lang="en">
 <html>
 <head>
-	<meta charset="UTF-8"
+	<meta charset="UTF-8">
 	<title>Comic Store</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/sstyle.css">
 </head>
 <body>
 <div class="container">
-	<button id="loggeo" class="btn btn-info btn-lg" onclick="mostrar();">Login</button>
-	<div class="loggeado"><p>Loggeado como: <%= user %></p></div>
-	<hr />
-	<div class="login">
-			<div  class="panel panel-primary form" >
-				<div class="panel-heading" >
-					<Strong>LOGGEATE CHAVAL</Strong>
-				</div>
+	<header>
+		<button id="loggeo" class="btn btn-info btn-lg" onclick="mostrar();">Login</button>
+		<div class="loggeado"><p>Loggeado como: <%= user %></p></div>
+		<img class="icono slide1 slid" />	
+		<hr />
+		<div class="login">
+				<div  class="panel panel-primary form" >
+					<div class="panel-heading" >
+						<Strong>LOGGEATE CHAVAL</Strong>
+					</div>
 
-				<div class="panel-body">
-					<div class="form-group">
-						<label for="inputName">User Name</label>
-						<input type="text" class="form-control" id="userName" placeholder="User Name" />
+					<div class="panel-body">
+						<div class="form-group">
+							<label for="inputName">User Name</label>
+							<input type="text" class="form-control" id="userName" placeholder="User Name" />
+						</div>
+						<div class="form-group"> 
+							<label for="inputPass">Password</label>
+							<input type="password" class="form-control" id="userPass" placeholder="Password" />
+						</div>
+						<button id="btnLogin" class="btn btn-success ">Login</button>
+						<button id="btnSignUp" class="btn btn-info ">Sign up</button>
+						<p id="login_error" class="bg-danger"></p>
 					</div>
-					<div class="form-group"> 
-						<label for="inputPass">Password</label>
-						<input type="password" class="form-control" id="userPass" placeholder="Password" />
-					</div>
-					<button id="btnLogin" class="btn btn-success ">Login</button>
-					<button id="btnSignUp" class="btn btn-info ">Sign up</button>
-					<p id="login_error" class="bg-danger"></p>
 				</div>
-			</div>
-	</div>
+		</div>
+	</header>
+	<hr />
 </div>
 <!-- librerias -->
 <script src="js/libs/jquery-1.11.2.js"></script>
@@ -44,5 +48,6 @@
 <script src="js/models/User.js"></script>
 <!-- app -->
 <script src="js/App.js"></script>
+<script src="js/libs/carrusel.js"></script>
 </body>
 </html>
