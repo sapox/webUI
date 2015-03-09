@@ -16,7 +16,8 @@ function mostrar(){
 			defaults: function(){
 				return{
 					name:'',
-					pass:''
+					pass:'',
+					esAdmin: false,
 				}
 			}
 		});
@@ -32,9 +33,13 @@ function mostrar(){
 		var TweetList = Backbone.Collection.extend({
 			model: Tweet
 		});
-
+		var UserList = Backbone.Collection.extend({ //ponele
+			model: User
+		});
+		var users = new UserList(); //ponele
 		var tweets = new TweetList();
 		//vista
+		
 		var TweetView = Backbone.View.extend({
 			model: new Tweet(),
 			tagName: 'div',
@@ -62,17 +67,35 @@ function mostrar(){
 					return this;
 			}
 		});
-
+		var UsersView = Backbone.View.extend({
+			model: User,
+			el: $('#user-container'),
+			initialize: function(){
+				this.model.on('add', this.render, this);
+			},
+			render: function(){
+				var self = this;
+				self.$el.html('');
+				console.log("llegaste hasta aca");
+				return this;
+			}
+		});
 		$(document).ready(function(){
 			$('#new-tweet').submit(function(ev){
 				var tweet = new Tweet({author:$('#author-name').val(), status:$('#status').val()});
 				tweets.add(tweet);
 				console.log(tweets.toJSON());
-				
 				return false;
 			});
+			//checkeo user
+			$('#loyin').submit(function(ev){
+				var user = new User({name:$('#userName').val(), pass:$('#userPass').val()});
+				
+				console.log(user.toJSON());
+				//return false;
+			});
 			var appView = new TweetsView();
+			var userView = new UserView();
 		});
-		
 
 })(jQuery);
