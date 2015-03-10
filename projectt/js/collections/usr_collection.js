@@ -1,5 +1,7 @@
+var App = App || {};
+
 App.UserCollection = Backbone.Collection.extend({
-	model: App.userModel,
+	model: App.User,
 	localStorage: new Backbone.LocalStorage('user_store'),
 	createNewUser: function (data)
 	{	
@@ -15,14 +17,14 @@ App.UserCollection = Backbone.Collection.extend({
 			 * different ids everything should work just fine. In your case if you really don't intend to manage the ids by 
 			 * yourself you could omit them upon model instantiation and have backbone generate them for you
 			 */
-			if (regexp.test(data.username) && regexp_pswd.test(data.pswd)){
+			if (regexp.test(data.mail) && regexp_pswd.test(data.pass)){
 				
-				if (data.username === 'sheldon'){
-					data.admin = true;
+				if (data.mail === 'spike@gmail.com'){
+					data.esAdmin = true;
 				}
 				
 				data.id = this.nextOrder();
-				var user = new app.userModel(data);
+				var user = new App.User(data);
 				this.add(user);
 				user.save();
 				this.fetch();
@@ -38,7 +40,7 @@ App.UserCollection = Backbone.Collection.extend({
 	
 	comparator: function (user)
 	{
-		return user.get('username');
+		return user.get('mail');
 	},
 	
 	nextOrder: function (){

@@ -1,4 +1,5 @@
 /* ********************************* */
+var App = App || {};
 
 App.SessionCollection = Backbone.Collection.extend({
 	

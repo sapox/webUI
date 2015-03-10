@@ -1,3 +1,5 @@
+var App = App || {};
+
 App.Auth_usr = Backbone.View.extend({
 	
 	el:'#con-tent',
@@ -62,7 +64,7 @@ App.RegisterView = Backbone.View.extend({
 	
 	el: '#con-tent',
 	
-	template: _.template($('#tpl_register').html()),
+	template: _.template($('#register_usr').html()),
 	
 	events: {
 		'click #btn-create'	:	'createAccount',
@@ -71,8 +73,8 @@ App.RegisterView = Backbone.View.extend({
 
 	render: function ()
 	{ 
-		$('header').remove();
-		$('#sidebar_content').addClass('hidden');
+		//$('header').remove();
+		//$('#sidebar_content').addClass('hidden');
 		this.$el.html(this.template); 
 		return this;	
 	},
@@ -81,13 +83,13 @@ App.RegisterView = Backbone.View.extend({
 	{
 		if (evt) evt.preventDefault();
 		var user = {
-				email: $('#email_input').val(),
-				pswd: $('#pswd_input').val()
+				mail: $('#inputEmail').val(),
+				pass: $('#inputPass').val()
 			};
 		//console.log(this.validate());
-		var result = app.user_collection.createNewUser(user);
+		var result = App.usr_collection.createNewUser(user);
 		console.log(result, 'resultado de la registracion');
-		console.log(app.user_collection.models,' models in user_collection');
+		console.log(App.usr_collection.models,' models in user_collection');
 		if (result) {
 			
 			window.location.href = '';	
@@ -106,4 +108,4 @@ App.RegisterView = Backbone.View.extend({
 });
 
 App.register_view = new App.RegisterView();
-App.auth_usr = new App.Auth_usr();
+//App.auth_usr = new App.Auth_usr();
