@@ -1,5 +1,3 @@
-var App = App || {};
-
 App.UserCollection = Backbone.Collection.extend({
 	model: App.User,
 	localStorage: new Backbone.LocalStorage('user_store'),
@@ -53,5 +51,5 @@ App.UserCollection = Backbone.Collection.extend({
 });
 
 
-App.user_collection = new App.UserCollection();
-App.user_collection.fetch();
+App.usr_collection = new App.UserCollection();
+App.usr_collection.fetch();

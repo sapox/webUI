@@ -1,4 +1,4 @@
-var App = App || {};
+//var App = App || {};
 
 App.Auth_usr = Backbone.View.extend({
 	
@@ -32,7 +32,7 @@ App.Auth_usr = Backbone.View.extend({
 					console.log("so admin");
 					location.hash = '#admin-page';
 				}else{
-					console.log("guest");
+					console.log("Bienvenido! "+user.mail);
 					location.hash = '#home';
 				}
 			}else{
@@ -87,6 +87,7 @@ App.RegisterView = Backbone.View.extend({
 				pass: $('#inputPass').val()
 			};
 		//console.log(this.validate());
+		App.usr_collection = new App.UserCollection();
 		var result = App.usr_collection.createNewUser(user);
 		console.log(result, 'resultado de la registracion');
 		console.log(App.usr_collection.models,' models in user_collection');
@@ -101,11 +102,12 @@ App.RegisterView = Backbone.View.extend({
 	
 	notCreateAccount: function ()
 	{ 
+		
 		window.location.href = ''; 
 		
 	}
 	
 });
 
+//
 App.register_view = new App.RegisterView();
-//App.auth_usr = new App.Auth_usr();

@@ -3,16 +3,22 @@ var App = App || {};
 App.Routers = Backbone.Router.extend({
 
 	routes:{
-		''			: 'Login',
+		''			: 'login',
 		'register'  : 'register',
+		'home'      : 'home',
 		'User'		: 'User'
 	},
-	Login : function(){
+	login : function () {
 		App.auth_usr.render();
 	},
 	register: function ()
 	{
 		App.register_view.render();
+	},
+	home: function()
+	{
+		var login = App.session_collection.check_login();
+		App.home_view.render();
 	}
 });
 

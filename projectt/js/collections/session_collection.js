@@ -1,5 +1,5 @@
 /* ********************************* */
-var App = App || {};
+//var App = App || {};
 
 App.SessionCollection = Backbone.Collection.extend({
 	
@@ -10,14 +10,14 @@ App.SessionCollection = Backbone.Collection.extend({
 	{	
 		
 		// GET USER DATA
-		var user = App.user_collection.ifExist(data);
+		var user = App.usr_collection.ifExist(data);
 		// CHECK IF EXIST
 		if (user){
 			this.fetch();
 			var session = this.get(0);
 			if(!session)
 			{
-				session = new app.SessionModel({ 
+				session = new App.SessionModel({ 
 					session	: true, 
 					id_user	: user.get('id') 
 				});

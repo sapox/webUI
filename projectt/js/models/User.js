@@ -1,4 +1,4 @@
-var App = App || {};
+//var App = App || {};
 
 App.User = Backbone.Model.extend({
 	defaults:{
