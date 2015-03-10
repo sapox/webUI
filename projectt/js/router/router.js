@@ -11,5 +11,6 @@ App.Routers = Backbone.Router.extend({
 	}
 });
 
+App.auth_usr = new App.Auth_usr();
 App.router = new App.Routers();
 Backbone.history.start(); 

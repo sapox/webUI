@@ -9,7 +9,7 @@ App.SessionCollection = Backbone.Collection.extend({
 	{	
 		
 		// GET USER DATA
-		var user = app.user_collection.ifExist(data);
+		var user = App.user_collection.ifExist(data);
 		// CHECK IF EXIST
 		if (user){
 			this.fetch();
