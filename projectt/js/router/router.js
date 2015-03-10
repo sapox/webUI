@@ -9,6 +9,7 @@ App.Routers = Backbone.Router.extend({
 		'User'		: 'User'
 	},
 	login : function () {
+		$('#sidebar').addClass('hidden');
 		App.auth_usr.render();
 	},
 	register: function ()

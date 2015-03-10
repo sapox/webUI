@@ -39,3 +39,39 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.intento{
+  height: 160px;
+  width: 100%;
+  background:url(../img/skyline1.png) repeat center top 0px;
+  position:absolute;
+  bottom: 0px; 
+  background-clip:
+}
+.icono{
+float: left;
+width: 201px;
+height: 110px;
+border-radius: 5px;
+}
+.slid{
+width: 50%;
+height: 190px;
+border: 7px solid #fff;
+box-shadow: 5px 5px 5px 5px #aaa;
+-webkit-box-shadow: 5px 5px 5px 5px #aaa;
+-moz-box-shadow: 5px 5px 5px 5px #aaa;
+-o-box-shadow: 5px 5px 5px 5px #aaa; 
+margin-left: 20%;
+}
+.slide1{
+background: url(../img/slide1.jpg);
+}
+.slide2{
+background: url(../img/slide2.jpg);
+}
+.slide3{
+background: url(../img/slide3.jpg);
+}
+.slide4{
+background: url(../img/slide4.jpg);
+}
