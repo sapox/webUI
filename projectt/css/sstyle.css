@@ -1,0 +1,73 @@
+.login{
+	width: 200px;
+	float:right;
+	display: none;
+}
+.panel-primary > .panel-heading{
+	background-color: #3FAB48;
+	border-color: #3FAB48;
+}
+#loggeo{
+	float:right;
+	position:absolute;
+	right: 5px;
+	top:10px;
+}
+.loggeado{
+	display:none;
+	float:right;
+	color:#E67272;
+	font-size: 1em;
+}
+.slide1{
+background: url(../img/slide1.jpg);
+}
+.slide2{
+background: url(../img/slide2.jpg);
+}
+.slide3{
+background: url(../img/slide3.jpg);
+}
+.slide4{
+background: url(../img/slide4.jpg);
+}
+.icono{
+float: left;
+width: 201px;
+height: 110px;
+border-radius: 5px;
+}
+.slid{
+width: 50%;
+height: 190px;
+border: 7px solid #fff;
+box-shadow: 5px 5px 5px 5px #aaa;
+-webkit-box-shadow: 5px 5px 5px 5px #aaa;
+-moz-box-shadow: 5px 5px 5px 5px #aaa;
+-o-box-shadow: 5px 5px 5px 5px #aaa; 
+margin-left: 20%;
+}
+.sec1{
+	width: 30%;
+	float:left;
+	margin-left: 2%;
+	display: block;
+	font-family: arial;
+}
+footer{
+	height: 250px;
+	width: 100%;
+	background:#ccc;
+	float:left;
+	position: absolute;
+	bottom: 10px;
+	color:rgb(66, 57, 57);
+}
+.intento{
+	height: 160px;
+	width: 100%;
+	background:url(../img/skyline1.png) repeat center top 0px;
+	position:absolute;
+	bottom: 0px; 
+	background-clip:
+}

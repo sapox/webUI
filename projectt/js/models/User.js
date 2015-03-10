@@ -2,8 +2,8 @@ var App = App || {};
 
 App.User = Backbone.Model.extend({
 	defaults:{
-	name:'',
+	mail:'',
 	pass:'',
 	esAdmin: false
-	}
+	},
 });

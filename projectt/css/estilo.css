@@ -1,0 +1,18 @@
+.icono{
+	float: left;
+	width: 103px;
+	height: 125px;
+	border-radius: 5px;
+	border: 7px solid #aaa;
+}
+.comic{
+	height: 250px;
+	background:url(../img/marvel.jpg);
+	/*margin-left: 12%;*/
+}
+.container{
+	width: 100%;
+}
+.span2{
+	width: 30%;
+}
