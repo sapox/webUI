@@ -9,8 +9,9 @@ App.Auth_usr = Backbone.View.extend({
 		'click #btn-register' : 'register', 
 	},
 	
-	render function(){
+	render: function(){
 		//$('#content').removeclass
+		this.$el.html(this.template); 
 	},
 
 	login: function(evt){

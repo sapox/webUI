@@ -1,12 +1,15 @@
 var App = App || {};
 
-App.Router = Backbone.Router.extend({
+App.Routers = Backbone.Router.extend({
 
 	routes:{
 		''			: 'Login',
 		'User'		: 'User'
 	},
 	Login : function(){
-		this.render(App.LoginView,"");
+		App.auth_usr.render();
 	}
 });
+
+App.router = new App.Routers();
+Backbone.history.start(); 

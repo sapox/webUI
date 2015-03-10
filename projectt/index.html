@@ -18,13 +18,14 @@
 	</div>
 	<!-- templates -->
 	
-	<script type="text/html" id="login_usr">
+	<script type="text/template" id="login_usr">
 		<form class="form-signin" action="">
 			<h2 class="form-signin bg-info">Please sign in</h2>
 			<label class="sr-only" for="inputEmail"></label>
 			<input id="inputEmail" class="form-control" type="email" placeholder="Email address" />
 			<input id="inputPass" class="form-control" type="password" placeholder="password" />
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+			<button class="btn btn-lg btn-primary btn-block" id="btn-signin" type="submit">Sign In</button>
+			<button class="btn btn-lg btn-secondary btn-block" id="btn-register" type="submit">register</button>
 		</form>	
 	</script>
 	<!-- libs -->
@@ -32,7 +33,16 @@
 	<script src="js/libs/underscore-min.js"></script>
 	<script src="js/libs/backbone-min.js"></script>
 	<script src="js/libs/backbone.localStorage.js"></script>
+	<!-- app -->
+	<script src="js/App.js"></script>
 	<!-- models -->
+	<script src="js/models/User.js"></script>
 	<!-- Views -->
+	<script src="js/views/auth_usr.js"></script>
+	<!-- collections -->
+	<script src="js/collections/usr_collection.js"></script>
+	<script src="js/collections/session_collection.js"></script>
+	<!-- Routers -->
+	<script src="js/router/router.js"></script>
 </body>
 </html>
