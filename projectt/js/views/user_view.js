@@ -16,7 +16,7 @@ App.userView = Backbone.View.extend({
 
 App.profileView = Backbone.View.extend({
 	
-	template: $('#tpl_user_profile'),
+	template: $('#user_profile'), //conectar user profile
 	
 	render: function ()
 	{

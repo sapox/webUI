@@ -80,7 +80,7 @@ header{
 	margin-top: -50px;
 }
 #content{
-	height: 300px;
+	height: 20%;
 	margin-top: 20px;
 	float:left;
 	border: 2px solid #000;
@@ -92,7 +92,7 @@ header{
 	src:url(../fonts/actionj.ttf);
 }
 footer{
-	height: 250px;
+	height: 30%;
 	width: 100%;
 	background:#ccc;
 	float:left;
